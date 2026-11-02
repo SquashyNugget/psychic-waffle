@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+		9B77887A690C3D4EAA6043BE = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = BadmintonCourtManager.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		32AEAA1544E269409831F162 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.app-extension;
+			includeInIndex = 0;
+			path = CourtLiveActivityExtension.appex;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		619451BBC1F73A9FE9983098 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = CourtManagerApp.swift;
+			sourceTree = "<group>";
+		};
+		F0E2A573AF78970DF2877E82 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = CourtStore.swift;
+			sourceTree = "<group>";
+		};
+		FF50DFD404C1013F7312ECCA = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = Info.plist;
+			sourceTree = "<group>";
+		};
+		E75C109B0479978B34C64578 = {
+			isa = PBXGroup;
+			children = (
+				619451BBC1F73A9FE9983098,
+				F0E2A573AF78970DF2877E82,
+				FF50DFD404C1013F7312ECCA,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2D9F8E6A4128B9577127DA35 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = CourtTimer.swift;
+			sourceTree = "<group>";
+		};
+		5AEA49AD9D7016FD34748FD0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = TimerEngine.swift;
+			sourceTree = "<group>";
+		};
+		6638A52FB8ED23AADF9E5B11 = {
+			isa = PBXGroup;
+			children = (
+				2D9F8E6A4128B9577127DA35,
+				5AEA49AD9D7016FD34748FD0,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		504F7F29B9D6E568E88A0111 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = CourtLiveActivities.swift;
+			sourceTree = "<group>";
+		};
+		E5EE4CD684F7BF5927CF80F7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = CourtNotifications.swift;
+			sourceTree = "<group>";
+		};
+		820A56A4D13F33BBDCF70581 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = CourtPersistence.swift;
+			sourceTree = "<group>";
+		};
+		0B1E42A418692279B4FF8E50 = {
+			isa = PBXGroup;
+			children = (
+				504F7F29B9D6E568E88A0111,
+				E5EE4CD684F7BF5927CF80F7,
+				820A56A4D13F33BBDCF70581,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7B7C46110EEAA89862CFC53E = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = CourtCardView.swift;
+			sourceTree = "<group>";
+		};
+		ECB70961C6402BBAAB81ACBA = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = DashboardView.swift;
+			sourceTree = "<group>";
+		};
+		7CBA48B3FAEAAA47FBB40A97 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = SettingsView.swift;
+			sourceTree = "<group>";
+		};
+		BC63B2D3DC493B94586E9AE1 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = TimerRing.swift;
+			sourceTree = "<group>";
+		};
+		8A2F1790F4C7577A6D37987B = {
+			isa = PBXGroup;
+			children = (
+				7B7C46110EEAA89862CFC53E,
+				ECB70961C6402BBAAB81ACBA,
+				7CBA48B3FAEAAA47FBB40A97,
+				BC63B2D3DC493B94586E9AE1,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		67E2E65AB93B19FBF44C07B8 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = CourtActivityAttributes.swift;
+			sourceTree = "<group>";
+		};
+		E407AC7FB56C62753693B520 = {
+			isa = PBXGroup;
+			children = (
+				67E2E65AB93B19FBF44C07B8,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7F662D46B5740BCB2A48BE84 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = CourtLiveActivityWidget.swift;
+			sourceTree = "<group>";
+		};
+		953E7E15895F5D2C251F11FD = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = Info.plist;
+			sourceTree = "<group>";
+		};
+		D1BF41799114C27D035281EC = {
+			isa = PBXGroup;
+			children = (
+				7F662D46B5740BCB2A48BE84,
+				953E7E15895F5D2C251F11FD,
+			);
+			path = WidgetExtension;
+			sourceTree = "<group>";
+		};
+		F9CEE4D67BD77303D79D03D0 = {
+			isa = PBXFileReference;
+			lastKnownFileType = folder.assetcatalog;
+			path = Assets.xcassets;
+			sourceTree = "<group>";
+		};
+		BBDEA5698D0254BD69850B23 = {
+			isa = PBXGroup;
+			children = (
+				F9CEE4D67BD77303D79D03D0,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5C93EF57994845E792F31FA1 = {
+			isa = PBXGroup;
+			children = (
+				9B77887A690C3D4EAA6043BE,
+				32AEAA1544E269409831F162,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		265DB6C5D97F10BBB49174BF = {
+			isa = PBXGroup;
+			children = (
+				E75C109B0479978B34C64578,
+				6638A52FB8ED23AADF9E5B11,
+				0B1E42A418692279B4FF8E50,
+				8A2F1790F4C7577A6D37987B,
+				E407AC7FB56C62753693B520,
+				D1BF41799114C27D035281EC,
+				BBDEA5698D0254BD69850B23,
+				5C93EF57994845E792F31FA1,
+			);
+			sourceTree = "<group>";
+		};
+		B5D4B2CC505E8CFDAACC2EE4 = {
+			isa = PBXBuildFile;
+			fileRef = 619451BBC1F73A9FE9983098;
+		};
+		D3221EA927EBAA3C35D54DE2 = {
+			isa = PBXBuildFile;
+			fileRef = F0E2A573AF78970DF2877E82;
+		};
+		C0E8901599EBDF57F521814A = {
+			isa = PBXBuildFile;
+			fileRef = 2D9F8E6A4128B9577127DA35;
+		};
+		BF44AD305148D4E7B67999C3 = {
+			isa = PBXBuildFile;
+			fileRef = 5AEA49AD9D7016FD34748FD0;
+		};
+		08FC695E5035461F5631597C = {
+			isa = PBXBuildFile;
+			fileRef = 504F7F29B9D6E568E88A0111;
+		};
+		49EC5A0BC2ABD97BEB1D8099 = {
+			isa = PBXBuildFile;
+			fileRef = E5EE4CD684F7BF5927CF80F7;
+		};
+		91671064B9F9FC05A919087B = {
+			isa = PBXBuildFile;
+			fileRef = 820A56A4D13F33BBDCF70581;
+		};
+		257AB5FA650D9855966B4C04 = {
+			isa = PBXBuildFile;
+			fileRef = 67E2E65AB93B19FBF44C07B8;
+		};
+		114ADB02B9DEB42928F39AA4 = {
+			isa = PBXBuildFile;
+			fileRef = 7B7C46110EEAA89862CFC53E;
+		};
+		466D15DFC7DC4E88BC79DA14 = {
+			isa = PBXBuildFile;
+			fileRef = ECB70961C6402BBAAB81ACBA;
+		};
+		47DEB9DA6DDA063E70C577CA = {
+			isa = PBXBuildFile;
+			fileRef = 7CBA48B3FAEAAA47FBB40A97;
+		};
+		2D91D198593E3F95B5980296 = {
+			isa = PBXBuildFile;
+			fileRef = BC63B2D3DC493B94586E9AE1;
+		};
+		0B273EFDB54BA8BC97F46E2A = {
+			isa = PBXBuildFile;
+			fileRef = 67E2E65AB93B19FBF44C07B8;
+		};
+		91C9DC43321A0E7390F78E24 = {
+			isa = PBXBuildFile;
+			fileRef = 7F662D46B5740BCB2A48BE84;
+		};
+		CBC839F31A5582AD57160C38 = {
+			isa = PBXBuildFile;
+			fileRef = F9CEE4D67BD77303D79D03D0;
+		};
+		4BF8D3866E4E787DC82D713A = {
+			isa = PBXBuildFile;
+			fileRef = 32AEAA1544E269409831F162;
+			settings = {
+				ATTRIBUTES = (
+					RemoveHeadersOnCopy,
+				);
+			};
+		};
+		6923B0FA513B9F7C440D4608 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D4B2CC505E8CFDAACC2EE4,
+				D3221EA927EBAA3C35D54DE2,
+				C0E8901599EBDF57F521814A,
+				BF44AD305148D4E7B67999C3,
+				08FC695E5035461F5631597C,
+				49EC5A0BC2ABD97BEB1D8099,
+				91671064B9F9FC05A919087B,
+				257AB5FA650D9855966B4C04,
+				114ADB02B9DEB42928F39AA4,
+				466D15DFC7DC4E88BC79DA14,
+				47DEB9DA6DDA063E70C577CA,
+				2D91D198593E3F95B5980296,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05083A95958BF06F594FC271 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B273EFDB54BA8BC97F46E2A,
+				91C9DC43321A0E7390F78E24,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9135872F7027AFEB3760DE77 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC839F31A5582AD57160C38,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16E82AE04F6FE37DE96A100B = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26DC9C868FADC46ADA01D6CA = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2560C3A7C6811F64EE9E57FF = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93D707D575B180B64C5E9544 = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4BF8D3866E4E787DC82D713A,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89040F3B1099951E9AED6E1B = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 253B9857653E2BAE044FB6FC;
+			proxyType = 1;
+			remoteGlobalIDString = D626D62F82A31FEBCE255897;
+			remoteInfo = CourtLiveActivityExtension;
+		};
+		FDE3E8A8C85A6C48FCC32175 = {
+			isa = PBXTargetDependency;
+			target = D626D62F82A31FEBCE255897;
+			targetProxy = 89040F3B1099951E9AED6E1B;
+		};
+		E1D1A753305210EF87A12E41 = {
+			isa = XCBuildConfiguration;
+			name = Debug;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = iphoneos;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				SWIFT_OPTIMIZATION_LEVEL = -Onone;
+			};
+		};
+		562E97B5F136A4A2D6F52F7A = {
+			isa = XCBuildConfiguration;
+			name = Release;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SDKROOT = iphoneos;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf-with-dsym;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				SWIFT_OPTIMIZATION_LEVEL = -O;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+		};
+		FE8145D690842D5C7793FECC = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1D1A753305210EF87A12E41,
+				562E97B5F136A4A2D6F52F7A,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C53BCF53981FB4C1C8636437 = {
+			isa = XCBuildConfiguration;
+			name = Debug;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				SWIFT_VERSION = 5.0;
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				GENERATE_INFOPLIST_FILE = NO;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.badminton.CourtManager;
+				INFOPLIST_FILE = App/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+			};
+		};
+		E40BDC5A37AA010D1874869F = {
+			isa = XCBuildConfiguration;
+			name = Release;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				SWIFT_VERSION = 5.0;
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				GENERATE_INFOPLIST_FILE = NO;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.badminton.CourtManager;
+				INFOPLIST_FILE = App/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+			};
+		};
+		8903D25D99EB620809FDD5BD = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C53BCF53981FB4C1C8636437,
+				E40BDC5A37AA010D1874869F,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC5AB902ED837DC65402F9F7 = {
+			isa = XCBuildConfiguration;
+			name = Debug;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				SWIFT_VERSION = 5.0;
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				GENERATE_INFOPLIST_FILE = NO;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.badminton.CourtManager.LiveActivity;
+				INFOPLIST_FILE = WidgetExtension/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				SKIP_INSTALL = YES;
+			};
+		};
+		C6BBD66E330CF8294556080C = {
+			isa = XCBuildConfiguration;
+			name = Release;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				SWIFT_VERSION = 5.0;
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				GENERATE_INFOPLIST_FILE = NO;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.badminton.CourtManager.LiveActivity;
+				INFOPLIST_FILE = WidgetExtension/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				SKIP_INSTALL = YES;
+			};
+		};
+		6845A54B8A2641894576CA50 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC5AB902ED837DC65402F9F7,
+				C6BBD66E330CF8294556080C,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CEBD2D499AEAAEE08A2BDAC = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8903D25D99EB620809FDD5BD;
+			buildPhases = (
+				6923B0FA513B9F7C440D4608,
+				26DC9C868FADC46ADA01D6CA,
+				9135872F7027AFEB3760DE77,
+				93D707D575B180B64C5E9544,
+			);
+			buildRules = ();
+			dependencies = (
+				FDE3E8A8C85A6C48FCC32175,
+			);
+			name = BadmintonCourtManager;
+			productName = BadmintonCourtManager;
+			productReference = 9B77887A690C3D4EAA6043BE;
+			productType = com.apple.product-type.application;
+		};
+		D626D62F82A31FEBCE255897 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6845A54B8A2641894576CA50;
+			buildPhases = (
+				05083A95958BF06F594FC271,
+				2560C3A7C6811F64EE9E57FF,
+				16E82AE04F6FE37DE96A100B,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = CourtLiveActivityExtension;
+			productName = CourtLiveActivityExtension;
+			productReference = 32AEAA1544E269409831F162;
+			productType = com.apple.product-type.app-extension;
+		};
+		253B9857653E2BAE044FB6FC = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					4CEBD2D499AEAAEE08A2BDAC = {
+						CreatedOnToolsVersion = 15.0;
+						ProvisioningStyle = Automatic;
+					};
+					D626D62F82A31FEBCE255897 = {
+						CreatedOnToolsVersion = 15.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FE8145D690842D5C7793FECC;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 265DB6C5D97F10BBB49174BF;
+			productRefGroup = 5C93EF57994845E792F31FA1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CEBD2D499AEAAEE08A2BDAC,
+				D626D62F82A31FEBCE255897,
+			);
+		};
+	};
+	rootObject = 253B9857653E2BAE044FB6FC;
+}
