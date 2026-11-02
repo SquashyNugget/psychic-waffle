@@ -1,0 +1,22 @@
+name: Build unsigned iOS IPA
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Show Xcode version
+        run: xcodebuild -version
+      - name: Swift model unit tests
+        run: swift test
+      - name: Compile app and extension into unsigned IPA
+        run: bash Scripts/build-unsigned-ipa.command
+      - name: Upload unsigned IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: BadmintonCourtManager-unsigned-ipa
+          path: Output/BadmintonCourtManager-UNSIGNED.ipa
+          if-no-files-found: error
