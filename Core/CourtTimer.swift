@@ -22,17 +22,17 @@ struct CourtTimer: Codable, Hashable, Identifiable {
     var isRunning: Bool { startedAt != nil }
     var isCompleted: Bool { completedAt != nil }
 
-    func elapsed(at date: Date = .now) -> TimeInterval {
+    func elapsed(at date: Date = Date()) -> TimeInterval {
         accumulated + (startedAt.map { max(0, date.timeIntervalSince($0)) } ?? 0)
     }
 
-    func remaining(at date: Date = .now) -> TimeInterval {
+    func remaining(at date: Date = Date()) -> TimeInterval {
         max(0, Self.knockUpDuration - elapsed(at: date))
     }
 
     /// True if this countdown has reached its deadline; the engine reconciles
     /// this state and resets it to zero the next time the app runs.
-    func hasExpired(at date: Date = .now) -> Bool {
+    func hasExpired(at date: Date = Date()) -> Bool {
         mode == .knockUp && isRunning && elapsed(at: date) >= Self.knockUpDuration
     }
 
