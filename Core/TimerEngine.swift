@@ -18,7 +18,7 @@ enum TimerEngine {
         court.completedAt = nil
     }
 
-    static func start(_ court: inout CourtTimer, now: Date = .now) {
+    static func start(_ court: inout CourtTimer, now: Date = Date()) {
         guard !court.isRunning else { return }
         if court.isCompleted || (court.mode == .knockUp && court.accumulated >= CourtTimer.knockUpDuration) {
             reset(&court)
@@ -27,7 +27,7 @@ enum TimerEngine {
         court.startedAt = now
     }
 
-    static func pause(_ court: inout CourtTimer, now: Date = .now) {
+    static func pause(_ court: inout CourtTimer, now: Date = Date()) {
         guard court.isRunning else { return }
         if court.hasExpired(at: now) {
             finish(&court, now: now)
@@ -39,7 +39,7 @@ enum TimerEngine {
 
     /// Returns true if a countdown was newly completed in this call.
     @discardableResult
-    static func reconcile(_ court: inout CourtTimer, now: Date = .now) -> Bool {
+    static func reconcile(_ court: inout CourtTimer, now: Date = Date()) -> Bool {
         guard court.hasExpired(at: now) else { return false }
         finish(&court, now: now)
         return true
@@ -51,7 +51,7 @@ enum TimerEngine {
         court.completedAt = now
     }
 
-    static func clockString(for court: CourtTimer, now: Date = .now) -> String {
+    static func clockString(for court: CourtTimer, now: Date = Date()) -> String {
         // Idle or completed Knock Up deliberately shows zero, as requested.
         let seconds: Int
         if court.mode == .knockUp {
@@ -67,7 +67,7 @@ enum TimerEngine {
         return String(format: "%02d:%02d", seconds / 60, seconds % 60)
     }
 
-    static func knockUpProgress(_ court: CourtTimer, now: Date = .now) -> Double {
+    static func knockUpProgress(_ court: CourtTimer, now: Date = Date()) -> Double {
         guard court.mode == .knockUp else { return 0 }
         guard court.isRunning || court.accumulated > 0 else { return 0 }
         return max(0, min(1, court.remaining(at: now) / CourtTimer.knockUpDuration))
