@@ -81,11 +81,12 @@ struct CourtLiveActivityWidget: Widget {
 
     private func courtCircle(_ court: LiveCourt, diameter: CGFloat) -> some View {
         VStack(spacing: 3) {
-            ZStack {
+            ZStack(alignment: .center) {
                 Circle()
                     .stroke(Color.white.opacity(0.18), lineWidth: 5)
+                    .frame(width: diameter, height: diameter)
+
                 if let end = court.endDate {
-                    // Time-based progress renders from dates without app-side timer ticks.
                     ProgressView(
                         timerInterval: court.startDate...end,
                         countsDown: true,
@@ -94,26 +95,34 @@ struct CourtLiveActivityWidget: Widget {
                     )
                     .progressViewStyle(.circular)
                     .tint(.mint)
+                    .frame(width: diameter, height: diameter, alignment: .center)
                 } else {
                     Circle()
                         .trim(from: 0, to: 0.32)
                         .stroke(Color.cyan,
                                 style: StrokeStyle(lineWidth: 5, lineCap: .round))
                         .rotationEffect(.degrees(-90))
+                        .frame(width: diameter, height: diameter)
                 }
-                VStack(spacing: 0) {
+            }
+            .frame(width: diameter, height: diameter)
+            // Place the court label and timer in a fixed-size centered overlay,
+            // independent of ProgressView's intrinsic layout.
+            .overlay(alignment: .center) {
+                VStack(alignment: .center, spacing: 1) {
                     Text("C\(court.id)")
                         .font(.system(size: 10, weight: .bold, design: .rounded))
                         .foregroundStyle(.white.opacity(0.8))
                     countdownText(court)
                         .font(.system(size: 11, weight: .bold, design: .rounded))
                         .monospacedDigit()
-                        .minimumScaleFactor(0.52)
+                        .minimumScaleFactor(0.5)
                         .lineLimit(1)
-                        .frame(width: diameter - 9)
                 }
+                .multilineTextAlignment(.center)
+                .frame(width: diameter - 10, height: diameter, alignment: .center)
             }
-            .frame(width: diameter, height: diameter)
+
             Text(court.kind == .knockUp ? "Knock Up" : "Stopwatch")
                 .font(.system(size: 8, weight: .medium))
                 .foregroundStyle(.secondary)
