@@ -4,7 +4,7 @@ import WidgetKit
 
 /// Lock Screen: circular countdown for each active court.
 /// iOS renders Text(timerInterval:) as a live countdown while the app sleeps.
-/// The decorative ring cannot be guaranteed to animate every second.
+/// Time-based ProgressView lets the system render a countdown ring.
 struct CourtLiveActivityWidget: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: CourtActivityAttributes.self) { context in
@@ -84,11 +84,23 @@ struct CourtLiveActivityWidget: Widget {
             ZStack {
                 Circle()
                     .stroke(Color.white.opacity(0.18), lineWidth: 5)
-                Circle()
-                    .trim(from: 0, to: court.kind == .knockUp ? 1 : 0.32)
-                    .stroke(court.kind == .knockUp ? Color.mint : Color.cyan,
-                            style: StrokeStyle(lineWidth: 5, lineCap: .round))
-                    .rotationEffect(.degrees(-90))
+                if let end = court.endDate {
+                    // Time-based progress renders from dates without app-side timer ticks.
+                    ProgressView(
+                        timerInterval: court.startDate...end,
+                        countsDown: true,
+                        label: { EmptyView() },
+                        currentValueLabel: { EmptyView() }
+                    )
+                    .progressViewStyle(.circular)
+                    .tint(.mint)
+                } else {
+                    Circle()
+                        .trim(from: 0, to: 0.32)
+                        .stroke(Color.cyan,
+                                style: StrokeStyle(lineWidth: 5, lineCap: .round))
+                        .rotationEffect(.degrees(-90))
+                }
                 VStack(spacing: 0) {
                     Text("C\(court.id)")
                         .font(.system(size: 10, weight: .bold, design: .rounded))
@@ -113,7 +125,6 @@ struct CourtLiveActivityWidget: Widget {
     private func countdownText(_ court: LiveCourt) -> some View {
         if let end = court.endDate {
             Text(timerInterval: court.startDate...end,
-                 pauseTime: end,
                  countsDown: true,
                  showsHours: false)
         } else {
